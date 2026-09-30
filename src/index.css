@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+/* Enable class-based dark mode (the `dark` class is set on <html>). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans:
+    "Inter", "Noto Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  font-family: var(--font-sans);
+  color-scheme: light;
+  background: #f6f7fb;
+  color: #0f172a;
+  --grid-line: rgba(15, 23, 42, 0.045);
+  --stroke: rgba(79, 70, 229, 0.55);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+.dark {
+  color-scheme: dark;
+  background: #070b14;
+  color: #eef2ff;
+  --grid-line: rgba(255, 255, 255, 0.025);
+  --stroke: rgba(125, 143, 255, 0.72);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+}
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+::selection {
+  background: rgba(109, 124, 255, 0.35);
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.glow {
+  box-shadow: 0 0 70px rgba(79, 91, 255, 0.12);
+}
+
+/* Glow is driven only by drop-shadow so it follows the text-stroke outline
+   (the per-pixel alpha) instead of the filled glyph silhouette. Using
+   text-shadow here would glow the whole name, so it is intentionally omitted. */
+.outline-word {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--stroke);
+  filter: drop-shadow(0 0 4px rgba(87, 105, 255, 0.28));
+  transition: filter 0.25s ease;
+}
+
+.outline-word.is-glowing {
+  filter: drop-shadow(0 0 7px rgba(100, 116, 255, 0.95))
+    drop-shadow(0 0 22px rgba(139, 92, 246, 0.6));
+}
+
+/* ---------- Switch animations: theme & language ---------- */
+
+/* Smoothly crossfade colours while the theme is being toggled. The
+   `theme-transition` class is only on <html> during the switch, so colours
+   do not animate on initial page load. */
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease,
+    color 0.4s ease,
+    fill 0.4s ease,
+    stroke 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Spin the sun/moon icon in when the theme flips. */
+html.theme-transition button[aria-label="Toggle theme"] svg {
+  animation: theme-icon 0.5s ease;
+}
+@keyframes theme-icon {
+  from {
+    transform: rotate(-90deg) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Fade + rise the content (and fade the navbar) when the language changes.
+   `lang-swap` is only on <html> during the switch. */
+html.lang-swap main,
+html.lang-swap footer {
+  animation: lang-swap 0.4s ease;
+}
+html.lang-swap header nav {
+  animation: lang-fade 0.4s ease;
+}
+@keyframes lang-swap {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes lang-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+[dir="rtl"] {
+  font-family:
+    "Noto Sans Arabic", "Inter", ui-sans-serif, system-ui, sans-serif;
+}

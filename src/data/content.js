@@ -1,0 +1,148 @@
+export const content = {
+  en: {
+    nav: {
+      home: "Home",
+      about: "About",
+      skills: "Skills",
+      projects: "Projects",
+      contact: "Contact",
+    },
+    hero: {
+      eyebrow: "Hello, I'm",
+      name: "Rayan",
+      role: "Software Developer",
+      text: "I build clean, responsive web experiences and practical software with a strong focus on simplicity and usability.",
+      work: "View my work",
+      contact: "Contact me",
+      scroll: "Scroll down",
+    },
+    projects: {
+      eyebrow: "My work",
+      title: "Selected projects",
+      text: "A small selection of projects and experiments.",
+      all: "View all projects",
+      items: [
+        {
+          title: "SmartVision",
+          desc: "An assistive computer-vision project designed for wearable use.",
+          tags: ["React", "AI", "NCNN"],
+        },
+        {
+          title: "Local AI Workspace",
+          desc: "A private interface for working with local language models and RAG.",
+          tags: ["React", "FastAPI", "LLM"],
+        },
+        {
+          title: "Game Discovery",
+          desc: "A recommendation experience built around game data and embeddings.",
+          tags: ["React", "Supabase", "API"],
+        },
+      ],
+    },
+    about: {
+      eyebrow: "About me",
+      title: "Building with purpose",
+      text: "I enjoy turning ideas into focused products, learning the systems behind them, and keeping the final experience simple.",
+      text2:
+        "I care about maintainable architecture, thoughtful interfaces, privacy-aware AI, and understanding how the pieces fit together.",
+      button: "More about me",
+    },
+    skills: {
+      eyebrow: "Toolkit",
+      title: "Technologies I use",
+      items: [
+        "React",
+        "Tailwind CSS",
+        "JavaScript",
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "Git",
+        "AI / RAG",
+      ],
+    },
+    contact: {
+      eyebrow: "Let's talk",
+      title: "Have a project in mind?",
+      text: "Feel free to reach out for projects, collaboration, or a simple hello.",
+      name: "Name",
+      email: "Email",
+      message: "Message",
+      send: "Send message",
+    },
+    footer: { rights: "All rights reserved." },
+  },
+  ar: {
+    nav: {
+      home: "الرئيسية",
+      about: "نبذة عني",
+      skills: "مهاراتي",
+      projects: "المشاريع",
+      contact: "تواصل معي",
+    },
+    hero: {
+      eyebrow: "مرحبًا، أنا",
+      name: "ريان",
+      role: "مطور برمجيات",
+      text: "أبني تجارب ويب نظيفة ومتجاوبة، وأطوّر حلول برمجية عملية مع تركيز كبير على البساطة وسهولة الاستخدام.",
+      work: "شاهد أعمالي",
+      contact: "تواصل معي",
+      scroll: "اسحب للأسفل",
+    },
+    projects: {
+      eyebrow: "أعمالي",
+      title: "مشاريع مختارة",
+      text: "مجموعة مختصرة من المشاريع والتجارب.",
+      all: "عرض جميع المشاريع",
+      items: [
+        {
+          title: "SmartVision",
+          desc: "مشروع رؤية حاسوبية مساعد مصمم للاستخدام القابل للارتداء.",
+          tags: ["React", "AI", "NCNN"],
+        },
+        {
+          title: "Local AI Workspace",
+          desc: "واجهة خاصة للتعامل مع النماذج المحلية وعمليات RAG.",
+          tags: ["React", "FastAPI", "LLM"],
+        },
+        {
+          title: "Game Discovery",
+          desc: "تجربة لاكتشاف الألعاب مبنية على البيانات والـ Embeddings.",
+          tags: ["React", "Supabase", "API"],
+        },
+      ],
+    },
+    about: {
+      eyebrow: "نبذة عني",
+      title: "أبني الأشياء بهدف",
+      text: "أحب تحويل الأفكار إلى منتجات مركزة، وفهم الأنظمة التي تقف خلفها، مع الحفاظ على التجربة النهائية بسيطة.",
+      text2:
+        "أهتم بالبنية القابلة للصيانة، والواجهات المدروسة، والذكاء الاصطناعي الذي يحترم الخصوصية، وفهم كيفية ترابط الأجزاء.",
+      button: "المزيد عني",
+    },
+    skills: {
+      eyebrow: "أدواتي",
+      title: "التقنيات التي أستخدمها",
+      items: [
+        "React",
+        "Tailwind CSS",
+        "JavaScript",
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "Git",
+        "AI / RAG",
+      ],
+    },
+    contact: {
+      eyebrow: "لنتحدث",
+      title: "عندك مشروع؟",
+      text: "تقدر تتواصل معي للمشاريع أو التعاون أو حتى مجرد تحية.",
+      name: "الاسم",
+      email: "البريد الإلكتروني",
+      message: "الرسالة",
+      send: "إرسال الرسالة",
+    },
+    footer: { rights: "جميع الحقوق محفوظة." },
+  },
+};
