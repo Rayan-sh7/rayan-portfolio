@@ -1,5 +1,6 @@
 import { Moon, Sun, Languages, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useApp } from "../context/AppContext";
 
 export default function Navbar() {
@@ -36,18 +37,18 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-900/10 bg-white/80 backdrop-blur-xl dark:border-white/[.07] dark:bg-[#070b14]/80">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 lg:px-8">
-        <a href="#home" className="text-xl font-black tracking-[-.08em] text-slate-900 dark:text-white">
+        <Link to="/#home" className="text-xl font-black tracking-[-.08em] text-slate-900 dark:text-white">
           R<span className="text-indigo-400">.</span>
-        </a>
+        </Link>
         <div className="hidden items-center gap-1 md:flex">
           {links.map(([id, label]) => (
-            <a
+            <Link
               key={id}
-              href={`#${id}`}
+              to={`/#${id}`}
               className={`rounded-full px-4 py-2 text-sm transition ${active === id ? "bg-slate-900/[.06] text-slate-900 dark:bg-white/[.07] dark:text-white" : "text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"}`}
             >
               {label}
-            </a>
+            </Link>
           ))}
         </div>
         <div className="flex items-center gap-2">
@@ -85,10 +86,10 @@ export default function Navbar() {
       >
         <div className="border-t border-slate-900/10 px-5 py-3 dark:border-white/[.07]">
           {links.map(([id, label], i) => (
-            <a
+            <Link
               onClick={() => setOpen(false)}
               key={id}
-              href={`#${id}`}
+              to={`/#${id}`}
               tabIndex={open ? 0 : -1}
               style={{ transitionDelay: open ? `${i * 45}ms` : "0ms" }}
               className={`block rounded-xl px-4 py-3 text-sm text-slate-600 transition-all duration-300 hover:bg-slate-900/[.05] dark:text-slate-300 dark:hover:bg-white/[.06] ${
@@ -98,7 +99,7 @@ export default function Navbar() {
               }`}
             >
               {label}
-            </a>
+            </Link>
           ))}
           <button
             onClick={() => setLang(lang === "ar" ? "en" : "ar")}

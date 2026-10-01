@@ -1,4 +1,5 @@
 import { ArrowDown, ArrowUpLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useApp } from "../context/AppContext";
 
 export default function Hero() {
@@ -20,8 +21,8 @@ export default function Hero() {
             {t.hero.text}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#projects"
+            <Link
+              to="/#projects"
               className="group rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 dark:bg-white dark:text-slate-950"
             >
               {t.hero.work}{" "}
@@ -29,13 +30,13 @@ export default function Hero() {
                 className="inline transition group-hover:-translate-y-0.5"
                 size={15}
               />
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              to="/#contact"
               className="rounded-full border border-slate-900/15 px-5 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-900/[.05] dark:border-white/15 dark:text-white dark:hover:bg-white/[.06]"
             >
               {t.hero.contact}
-            </a>
+            </Link>
           </div>
         </div>
         <div className="relative hidden min-h-[380px] items-center justify-center lg:flex">
