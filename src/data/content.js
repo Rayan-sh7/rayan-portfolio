@@ -11,7 +11,7 @@ export const content = {
       eyebrow: "Hello, I'm",
       name: "Rayan",
       role: "Software Developer",
-      text: "I build clean, responsive web experiences and practical software with a strong focus on simplicity and usability.",
+      text: "I'm a Computer Science graduate who builds practical software end to end, from AI systems like face recognition to full-stack web apps and self-hosted tools. I work with Python, FastAPI,and Next.js/React , and I'm focused on growing as an AI engineer.",
       work: "View my work",
       contact: "Contact me",
       scroll: "Scroll down",
@@ -41,10 +41,10 @@ export const content = {
     },
     about: {
       eyebrow: "About me",
-      title: "Building with purpose",
-      text: "I enjoy turning ideas into focused products, learning the systems behind them, and keeping the final experience simple.",
+      title: "Software developer, curious about how things work.",
+      text: "I'm a Computer Science graduate from Saudi Arabia who builds software end to end, from AI systems and computer vision to full-stack web apps and self-hosted tools.",
       text2:
-        "I care about maintainable architecture, thoughtful interfaces, privacy-aware AI, and understanding how the pieces fit together.",
+        "I care about privacy-first AI, clean architecture, and understanding how the pieces fit together. My graduation project, SmartVision, is a wearable face recognition system, and I'm currently growing as an AI engineer.",
       button: "More about me",
     },
     skills: {
@@ -63,7 +63,7 @@ export const content = {
     },
     contact: {
       eyebrow: "Let's talk",
-      title: "Have a project in mind?",
+      title: "Want to talk ?",
       text: "Feel free to reach out for projects, collaboration, or a simple hello.",
       name: "Name",
       email: "Email",

@@ -1,4 +1,5 @@
 import { Moon, Sun, Languages, Menu, X } from "lucide-react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useApp } from "../context/AppContext";
@@ -34,10 +35,24 @@ export default function Navbar() {
     };
   }, [lang]);
 
+  const socials = [
+    { namea: "Github", href: "https://github.com/Rayan-sh7", icon: FaGithub },
+    {
+      namea: "Linkedin",
+      href: "https://linkedin.com/in/rayan-alshammary-b77742265",
+      icon: FaLinkedin,
+    },
+  ];
+
+  console.log(socials);
+
   return (
     <header className="sticky top-0 z-50 border-b border-slate-900/10 bg-white/80 backdrop-blur-xl dark:border-white/[.07] dark:bg-[#070b14]/80">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 lg:px-8">
-        <Link to="/#home" className="text-xl font-black tracking-[-.08em] text-slate-900 dark:text-white">
+        <Link
+          to="/#home"
+          className="text-xl font-black tracking-[-.08em] text-slate-900 dark:text-white"
+        >
           R<span className="text-indigo-400">.</span>
         </Link>
         <div className="hidden items-center gap-1 md:flex">
@@ -52,18 +67,30 @@ export default function Navbar() {
           ))}
         </div>
         <div className="flex items-center gap-2">
+          {socials.map(({ namea, href, icon: Icon }) => (
+            <a
+              key={namea}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={namea}
+              className="hidden rounded-full border border-slate-900/10 p-2 text-slate-600 transition hover:bg-slate-900/[.05] hover:text-indigo-600 dark:border-white/10 dark:text-slate-300 dark:hover:bg-white/[.07] dark:hover:text-indigo-300 sm:block"
+            >
+              <Icon size={22} aria-hidden="true" />
+            </a>
+          ))}
           <button
             onClick={() => setDark(!dark)}
             aria-label="Toggle theme"
             className="rounded-full border border-slate-900/10 p-2 text-slate-600 hover:bg-slate-900/[.05] dark:border-white/10 dark:text-slate-300 dark:hover:bg-white/[.07]"
           >
-            {dark ? <Sun size={16} /> : <Moon size={16} />}
+            {dark ? <Sun size={20} /> : <Moon size={16} />}
           </button>
           <button
             onClick={() => setLang(lang === "ar" ? "en" : "ar")}
             className="hidden rounded-full border border-slate-900/10 px-3 py-2 text-xs text-slate-600 hover:bg-slate-900/[.05] dark:border-white/10 dark:text-slate-300 dark:hover:bg-white/[.07] sm:flex items-center gap-1"
           >
-            <Languages size={14} />
+            <Languages size={18} />
             {lang === "ar" ? "EN" : "العربية"}
           </button>
           <button
@@ -93,9 +120,7 @@ export default function Navbar() {
               tabIndex={open ? 0 : -1}
               style={{ transitionDelay: open ? `${i * 45}ms` : "0ms" }}
               className={`block rounded-xl px-4 py-3 text-sm text-slate-600 transition-all duration-300 hover:bg-slate-900/[.05] dark:text-slate-300 dark:hover:bg-white/[.06] ${
-                open
-                  ? "translate-y-0 opacity-100"
-                  : "-translate-y-2 opacity-0"
+                open ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0"
               }`}
             >
               {label}
