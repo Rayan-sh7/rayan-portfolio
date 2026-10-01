@@ -28,6 +28,30 @@ built assets resolve under the GitHub Pages project path.
 the hash without a native anchor jump, so this helper scrolls the target section
 into view (honouring the sections' `scroll-mt-16`).
 
+## Deploy to GitHub Pages
+
+GitHub Pages must serve the **built** output, not the source. The root
+`index.html` is Vite's dev entry (`<script src="/src/main.jsx">`), which only
+works under `npm run dev`; served statically it 404s because GitHub Pages does
+not transpile JSX and `/src/main.jsx` is an absolute path outside the project.
+
+`.github/workflows/deploy.yml` builds the app and publishes `dist/`:
+
+1. Push to `main` (or run the workflow manually from the **Actions** tab).
+2. In **Settings → Pages → Build and deployment**, set **Source** to
+   **GitHub Actions** — do *not* use "Deploy from a branch", which would publish
+   the un-built source and reproduce the `main.jsx` 404.
+
+The workflow installs dependencies, runs `npm run build`, and deploys `dist/` to
+`https://<user>.github.io/rayan-portfolio/`.
+
+To preview the production build locally:
+
+```bash
+npm run build
+npm run preview
+```
+
 ## Customize
 
 - `src/data/content.js` — Arabic/English content.
