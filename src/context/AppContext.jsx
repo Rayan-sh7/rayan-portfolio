@@ -70,6 +70,7 @@ export function AppProvider({ children }) {
     () => ({ lang, setLang, dark, setDark, t: content[lang] }),
     [lang, dark, setLang, setDark],
   );
+
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
 

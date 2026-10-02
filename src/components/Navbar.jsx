@@ -44,8 +44,6 @@ export default function Navbar() {
     },
   ];
 
-  console.log(socials);
-
   return (
     <header className="sticky top-0 z-50 border-b border-slate-900/10 bg-white/80 backdrop-blur-xl dark:border-white/[.07] dark:bg-[#070b14]/80">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 lg:px-8">
