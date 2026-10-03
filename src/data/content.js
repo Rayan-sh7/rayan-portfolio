@@ -28,9 +28,13 @@ export const content = {
           title: "SmartVision",
           desc: "An assistive computer-vision project designed for wearable use.",
           tags: ["InsightFace", "Face Embeddings", "NCNN"],
-          details: "",
+          details:
+            "A small device featuring a screen and a camera mountable on any pair of prescription glasses that helps Alzheimer's patients identify the people around them.\n it uses specialized facial recognition models to display the person's name and their relationship to the patient.",
           stack: ["Python", "InsightFace", "Face Embeddings", "NCNN"],
           image: "/projects/Smartvision-Logo.webp",
+          video:
+            "https://drive.google.com/file/d/18xX3gObX7yilP7ojsXcu5aP-cH6fV9QH/view?usp=sharing",
+          watchVideo: "Watch demo",
         },
         {
           title: "Local AI Workspace",
@@ -46,17 +50,17 @@ export const content = {
           tags: ["Next.js", "Supabase", "RAG", "LLM"],
           details: "...",
           stack: ["Next.js", "Supabase", "RAG", "LLM"],
-          image: "/projects/wshnl3b.png",
-          link: "https://...",
+          image: "/projects/wshnl3b-Logo.webp",
+          link: "https://whshnl3b.netlify.app",
         },
       ],
     },
     about: {
       eyebrow: "About me",
-      title: "Software developer, curious about how things work.",
+      title: "Software developer.",
       text: "I'm a Computer Science graduate from Saudi Arabia who builds software end to end, from AI systems and computer vision to full-stack web apps.",
       text2:
-        "I care about privacy-first AI, clean architecture, and understanding how the pieces fit together. My graduation project, SmartVision, is a wearable face recognition system, and I'm currently growing as an AI engineer.",
+        "I care about privacy-first AI, clean architecture, and understanding how the pieces fit together. My graduation project, SmartVision, is a wearable face recognition system.",
       button: "More about me",
     },
     skills: {
@@ -94,10 +98,10 @@ export const content = {
     },
     hero: {
       eyebrow: "مرحبًا، أنا",
-      name: "ريان",
+      name: "ريان الشمري",
       role: "مطور برمجيات",
-      text: "أبني تجارب ويب نظيفة ومتجاوبة، وأطوّر حلول برمجية عملية مع تركيز كبير على البساطة وسهولة الاستخدام.",
-      work: "شاهد أعمالي",
+      text: "خريج علوم حاسب الي , احب ابني البرمجيات المدعومة بالذكاء الاصطناعي , وبرمجيات الويب الكاملة باستخدام اطر العمل الحديثة. ",
+      work: "أعمالي",
       contact: "تواصل معي",
       scroll: "اسحب للأسفل",
     },
@@ -109,11 +113,15 @@ export const content = {
       items: [
         {
           title: "SmartVision",
-          desc: "مشروع رؤية حاسوبية مساعد مصمم للاستخدام القابل للارتداء.",
+          desc: "جهاز مساعد لمرضى الزهايمر مدعوم بالرؤية الحاسوبية والذكاء الاصطناعي",
           tags: ["React", "AI", "NCNN"],
-          details: "",
+          details:
+            "جهاز صغير يحتوي على شاشة وكاميرا قبل للتثبيت على اي نظارة طبية تساعد مرضى الزهايمر على معرفة الاشخاص الي حوله باستخدام نماذج متخصصة بالتعرف على الوجوه المختلفة وعرض اسمه والعلاقة",
           stack: ["Python", "InsightFace", "Face Embeddings", "NCNN"],
           image: "/projects/Smartvision-Logo.webp",
+          video:
+            "https://drive.google.com/file/d/18xX3gObX7yilP7ojsXcu5aP-cH6fV9QH/view?usp=sharing",
+          watchVideo: "شاهد الفيديو",
         },
         {
           title: "Local AI Workspace",
@@ -129,15 +137,15 @@ export const content = {
           tags: ["React", "Supabase", "API"],
           details: "...",
           stack: ["Next.js", "Supabase", "RAG", "LLM"],
-          image: "/projects/wshnl3b.png",
-          link: "https://...",
+          image: "/projects/wshnl3b-Logo.webp",
+          link: "https://whshnl3b.netlify.app",
         },
       ],
     },
     about: {
       eyebrow: "نبذة عني",
-      title: "أبني الأشياء بهدف",
-      text: "أحب تحويل الأفكار إلى منتجات مركزة، وفهم الأنظمة التي تقف خلفها، مع الحفاظ على التجربة النهائية بسيطة.",
+      title: "مطور برامج",
+      text: "انا خريج علوم حاسب من السعودية , بنيت عدة مشاريع وتطبيقات منوعة من البرمجيات المدعومو بالذكاء الاصطناعي والرؤية الحاسوبية الى بناء تطبيقات الويب المتكاملة",
       text2:
         "أهتم بالبنية القابلة للصيانة، والواجهات المدروسة، والذكاء الاصطناعي الذي يحترم الخصوصية، وفهم كيفية ترابط الأجزاء.",
       button: "المزيد عني",

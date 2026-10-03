@@ -15,7 +15,7 @@ export default function ProjectImage({
         alt={project.title}
         loading="lazy"
         onError={() => setFailed(true)}
-        className={`w-full rounded-2xl object-cover ${className}`}
+        className={`max-h-full max-w-full object-contain ${className}`}
       />
     );
   }

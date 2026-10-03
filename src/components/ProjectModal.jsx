@@ -83,7 +83,7 @@ export default function ProjectModal({
           <h4 className="mt-6 text-xs font-semibold uppercase tracking-widest text-indigo-500">
             {stackLabel}
           </h4>
-          <div className="mt-3 flex flex-wrap gap-2">
+          <div className="m-3 flex flex-wrap gap-2">
             {(project.stack || project.tags).map((item) => (
               <span
                 key={item}
@@ -93,18 +93,37 @@ export default function ProjectModal({
               </span>
             ))}
           </div>
+          <div className="mt-6 flex justify-center">
+            {project.video && (
+              <a
+                href={project.video}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex justify-self-center items-center gap-2 rounded-lg border border-current px-2 py-2 text-lg font-medium transition hover:opacity-80"
+              >
+                <svg
+                  className="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                {project.watchVideo}
+              </a>
+            )}
 
-          {project.link && (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-indigo-500"
-            >
-              {visitLabel}
-              <ArrowUpRight size={16} />
-            </a>
-          )}
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-indigo-500"
+              >
+                {visitLabel}
+                <ArrowUpRight size={16} />
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </div>
