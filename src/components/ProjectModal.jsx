@@ -76,6 +76,11 @@ export default function ProjectModal({
           >
             {project.title}
           </h3>
+          {project.soon && (
+            <span className="inline-flex items-center gap-2 rounded-full border border-gray-400 bg-amber-400/10 px-4 py-1.5 text-sm font-medium text-white-300">
+              {project.soon}
+            </span>
+          )}
           <p className="mt-3 leading-7 text-slate-600 dark:text-slate-400">
             {project.details || project.desc}
           </p>
@@ -119,8 +124,9 @@ export default function ProjectModal({
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-indigo-500"
               >
-                {visitLabel}
                 <ArrowUpRight size={16} />
+                {project.visitLabel}
+                {console.log(project.link)}
               </a>
             )}
           </div>

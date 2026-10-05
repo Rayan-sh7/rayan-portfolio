@@ -18,5 +18,9 @@
     "react-router-dom": "^7.18.4",
     "tailwindcss": "latest",
     "vite": "latest"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.4"
   }
 }

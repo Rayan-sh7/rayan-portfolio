@@ -8,17 +8,24 @@ export default function ProjectCard({ project, onSelect }) {
       </div>
       <div className="p-3 pt-5">
         <div className="flex items-start justify-between gap-4">
-          <h3 className="font-semibold text-slate-900 dark:text-white">
-            <button
-              type="button"
-              onClick={() => {
-                onSelect(project);
-              }}
-              className="text-start font-semibold text-slate-900 after:absolute after:inset-0 after:rounded-3xl focus:outline-none dark:text-white"
-            >
-              {project.title}
-            </button>
-          </h3>
+          <div className="flex flex-wrap items-center gap-2">
+            <h3 className="font-semibold text-slate-900 dark:text-white">
+              <button
+                type="button"
+                onClick={() => {
+                  onSelect(project);
+                }}
+                className="text-start font-semibold text-slate-900 after:absolute after:inset-0 after:rounded-3xl focus:outline-none dark:text-white"
+              >
+                {project.title}
+              </button>
+            </h3>
+            {project.soon && (
+              <span className="inline-flex items-center gap-2 rounded-full border border-gray-400 bg-amber-400/10 px-5 py-1 text-sm font-medium text-white-300">
+                {project.soon}
+              </span>
+            )}
+          </div>
           <ArrowUpLeft
             size={18}
             className="text-slate-400 transition group-hover:text-indigo-600 dark:text-slate-500 dark:group-hover:text-indigo-300"

@@ -3,6 +3,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useApp } from "../context/AppContext";
+import logo from "../assets/favicon.svg";
 
 export default function Navbar() {
   const { lang, setLang, dark, setDark, t } = useApp();
@@ -51,7 +52,7 @@ export default function Navbar() {
           to="/#home"
           className="text-xl font-black tracking-[-.08em] text-slate-900 dark:text-white"
         >
-          R<span className="text-indigo-400">.</span>
+          <img src={logo} alt="" className="h-6 w-auto" />
         </Link>
         <div className="hidden items-center gap-1 md:flex">
           {links.map(([id, label]) => (
