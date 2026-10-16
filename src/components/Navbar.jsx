@@ -73,7 +73,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={namea}
-              className="hidden rounded-full border border-slate-900/10 p-2 text-slate-600 transition hover:bg-slate-900/[.05] hover:text-indigo-600 dark:border-white/10 dark:text-slate-300 dark:hover:bg-white/[.07] dark:hover:text-indigo-300 sm:block"
+              className="rounded-full border border-slate-900/10 p-2 text-slate-600 transition hover:bg-slate-900/[.05] hover:text-indigo-600 dark:border-white/10 dark:text-slate-300 dark:hover:bg-white/[.07] dark:hover:text-indigo-300 sm:block"
             >
               <Icon size={22} aria-hidden="true" />
             </a>
