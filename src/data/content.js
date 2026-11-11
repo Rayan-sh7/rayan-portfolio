@@ -4,6 +4,7 @@ export const content = {
       home: "Home",
       about: "About",
       skills: "Skills",
+      certificates: "Certificates",
       projects: "Projects",
       contact: "Contact",
     },
@@ -15,6 +16,27 @@ export const content = {
       work: "View my work",
       contact: "Contact me",
       scroll: "Scroll down",
+    },
+    certificate: {
+      eyebrow: "Certifications",
+      title: "My Certifications",
+      credentialLabel: "Credential ID",
+      verify: "Verify certificate",
+      items: [
+        {
+          id: 1,
+          name: "AI Practiticoner Certification",
+          description:
+            "AWS Certified AI Practitioner validates foundational knowledge of artificial intelligence (AI), machine learning (ML), and generative AI concepts and use cases for AWS Services. This is a good starting point for individuals exploring AI/ML on AWS, whether adding AI skills to an existing cloud career or beginning to work with AI/ML technologies.",
+          provider: "Amazon Web Service (AWS)",
+          link: "https://aws.amazon.com/verification",
+          image:
+            "/certification/AWS Certified AI Practitioner certificate-1.png",
+          credential: "ce6e887974514f478d932c76a97be8f4",
+          copy: "Copy",
+          copied: "Copied!",
+        },
+      ],
     },
     projects: {
       eyebrow: "My work",
@@ -99,6 +121,7 @@ export const content = {
     nav: {
       home: "الرئيسية",
       about: "نبذة عني",
+      certificates: "الشهادات",
       skills: "مهاراتي",
       projects: "المشاريع",
       contact: "تواصل معي",
@@ -111,6 +134,27 @@ export const content = {
       work: "أعمالي",
       contact: "تواصل معي",
       scroll: "اسحب للأسفل",
+    },
+    certificate: {
+      eyebrow: "الشهادات",
+      title: "شهاداتي",
+      credentialLabel: "رقم التحقق",
+      verify: "للتحقق",
+      items: [
+        {
+          id: 1,
+          name: "AI Practiticoner Certification",
+          description:
+            "تؤكد شهادة AWS Certified AI Practitioner امتلاك المعرفة التأسيسية بمفاهيم الذكاء الاصطناعي (AI) وتعلّم الآلة (ML) والذكاء الاصطناعي المولّد، إلى جانب حالات استخدام هذه المفاهيم لخدمات AWS. تمثل هذه نقطة بداية جيدة للأفراد الراغبين في استكشاف الذكاء الاصطناعي/تعلّم الآلة على AWS، سواء كانوا يضيفون مهارات الذكاء الاصطناعي إلى مسيرتهم المهنية الحالية في مجال الحوسبة السحابية أو يبدؤون العمل باستخدام تقنيات الذكاء الاصطناعي/تعلّم الآلة.",
+          provider: "Amazon Web Service (AWS)",
+          link: "https://aws.amazon.com/verification",
+          image:
+            "/certification/AWS Certified AI Practitioner certificate-1.png",
+          credential: "ce6e887974514f478d932c76a97be8f4",
+          copy: "نسخ",
+          copied: "تم النسخ !",
+        },
+      ],
     },
     projects: {
       eyebrow: "أعمالي",

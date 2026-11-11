@@ -12,6 +12,7 @@ export default function Navbar() {
   const links = [
     ["home", t.nav.home],
     ["about", t.nav.about],
+    ["certificates", t.nav.certificates],
     ["skills", t.nav.skills],
     ["projects", t.nav.projects],
     ["contact", t.nav.contact],
